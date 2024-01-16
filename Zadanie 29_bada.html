@@ -19,5 +19,85 @@ Sposób 2:
  Używając zapisu postaci:
 nazwa_obiektu[nazwa_właściwości];
  </textarea>
+<H2>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</H2>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+ Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami.
+   Na przykład:
+  console.log(samochod1.kolor); 
+ </textarea>  
+<H3>3. Wymień cechy charakterystyczne konstruktora.</H3>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+    -Jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu.
+    -Nazywa się tak samo jak klasa.
+    -Nie zwraca żadnej wartości.
+    -Może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora new.
+ </textarea> 
+<H4>4. Konstruowanie obiektu na podstawie przykładuobiekt ma trzy pola oraz jedną metodę.</H4>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+ var osoba_1 =
+{
+nazwisko : ‘Kowalski’,
+imie :’Jan’,
+zawod :’piekarz’,
+wyświetl :function ()
+{
+Document.write(this.nazwisko + ‘ ‘ + this.imie)
+}
+}
+ </textarea>   
+<H5>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</H5>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+Słowo kluczowe this pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu. Pola i metody oddzielamy przecinkami w obrębie jednego obiektu.
+ </textarea>
+<H6>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</H6>
+  <textarea name="siejka" cols="80" rows="20" readonly>
+Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz
+metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo
+kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do
+odpowiedniego pola tego obiektu.
+function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+wypisz = function ()
+{
+alert(this.nazwisko + ' ' + this.imie)
+}
+}
+ </textarea>
+<H7>7. Znaczenie słowa kluczowego New wraz z przykładem.</H7>
+   <textarea name="siejka" cols="80" rows="20" readonly>
+Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new.
+Przykład
+var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');
+var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
+Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.
+     </textarea>
+<H8>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</H8>
+   <textarea name="siejka" cols="80" rows="20" readonly>
+Właściwość prototype
+Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości prototype.
+Przykład
+function klient()
+{
+this.nazwisko='Bielski';
+this.imie='Paweł';
+}
+klient.prototype.pisz_dane = function ()
+{
+document.write(this.nazwisko + ' ' + this.imie)
+}
+klient.prototype.zawod = 'kierowca';
+var osoba1 = new klient();
+osoba1.pisz_dane();
+W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. Dopiero po użyciu
+właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. Od tej pory każdy
+nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i
+metodę.
+Właściwość prototype może być również wykorzystana do dodawania dodatkowych
+metod lub właściwości do istniejących obiektów.
+     </textarea>
+
   </body>
 </html>
