@@ -12,13 +12,14 @@ function samochod(nazwa_s,kolor_s,miejsca_s,price_s){
   {
   alert('Nazwa:'+this.nazwa+' Kolor:'+this.kolor+' Miejsca:'+this.miejsca+' Cena:'+this.price);
   };  
-  samochod.rozmiar = "2,5 x 1";
- samochod.prototype.samochod_pokaz_DodatkowaWartosc=function() 
+  samochod.prototype.rozmiar = "2,5 x 1";
+ samochod.prototype.samochod_pokaz_DodatkowaWartosc = function() 
  {
    alert('Rozmiar: ' + this.rozmir + 'm')
  };
-    samochod.wiek=2;
-samochod.prototype.samochod_pokaz_Badaniuk=function() {
+    samochod.prototype.wiek=2;
+samochod.prototype.samochod_pokaz_Badaniuk = function() 
+{
   alert('Wiek: ' + this.wiek + 'lata')
           };
 var samochod1 = new samochod("Toyota Camry", "Czerwony", 5, 800000);
