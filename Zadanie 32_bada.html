@@ -1,1 +1,28 @@
+<html>
+<head>
+<title>Szkieliet zaliczeniowy</title>
+<style>
+</style>
+<script language="JavaScript">
+function samochod(nazwa,kolor,miejsca,cena){
+  this.nazwa=nazwa;
+  this.kolor=kolor;
+  this.miejsca=miejsca;
+  this.cena=cena;
+}
+  samochod.prototype.pokazDane = function () {
+  console.log(
+    `Imię: ${this.imie}, Nazwisko: ${this.nazwisko}, Wiek: ${this.wiek}, Klasa: ${this.klasa}`
+  );
 
+  samochod.samochod_wyswietl_Badaniuk();
+  samochod.wiek=2;
+  samochod.samochod_pokaz_Badaniuk=function() {alert('Wiek: ' + this.wiek + 'lata')}
+  samochod.samochod_pokaz_Badaniuk();
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
