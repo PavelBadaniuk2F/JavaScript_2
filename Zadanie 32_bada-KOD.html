@@ -1,1 +1,61 @@
-
+<!DOCTYPE html>
+ <head>
+ <meta charset="utf-8">
+ </head>
+<body>
+<h1>Kod HTMl:</h1>
+<form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+<html>
+<head>
+<title>Szkieliet zaliczeniowy</title>
+<script language="JavaScript">
+function samochod(nazwa_s,kolor_s,miejsca_s,price_s){
+  this.nazwa=nazwa_s;
+  this.kolor=kolor_s;
+  this.miejsca=miejsca_s;
+  this.price=price_s;
+}
+  samochod.prototype.samochod_wyswietl_Badaniuk = function () 
+  {
+  document.write('Nazwa:'+this.nazwa+' Kolor:'+this.kolor+' Miejsca:'+this.miejsca+' Cena:'+this.price+"<br>");
+  };  
+  samochod.prototype.rozmiar = '2,5 x 1';
+ samochod.prototype.samochod_pokaz_DodatkowaWartosc = function() 
+ {
+   document.write('Rozmiar: ' + this.rozmiar + 'm')
+ };
+    samochod.prototype.wiek=2;
+samochod.prototype.samochod_pokaz_Badaniuk = function() 
+{
+  document.write('Wiek: ' + this.wiek + 'lata')
+          };
+var samochod1 = new samochod("Toyota Camry", "Czerwony", 5, 800000);
+var samochod2 = new samochod("Ford Mustang", "Czarny", 4, 1000000);
+var samochod3 = new samochod("Volkswagen Golf", "Biały", 5, 5000000);
+samochod1.samochod_wyswietl_Badaniuk();
+document.write("dostęp do właściwości"+"<br>");
+document.write("samochod pierwszy: "+'Nazwa:'+samochod1.nazwa+'  Kolor:'+samochod1.kolor+'  Miejsca:'+samochod1.miejsca+'  Cena:'+samochod1.price);
+samochod1.samochod_pokaz_DodatkowaWartosc();
+samochod1.samochod_pokaz_Badaniuk();
+samochod2.samochod_wyswietl_Badaniuk();
+document.write("dostęp do właściwości"+"<br>");
+document.write("samochod drugi: "+' Nazwa:'+samochod2.nazwa+'  Kolor:'+samochod2.kolor+'  Miejsca:'+samochod2.miejsca+'  Cena:'+samochod2.price);
+samochod2.samochod_pokaz_DodatkowaWartosc();
+samochod2.samochod_pokaz_Badaniuk();
+samochod3.samochod_wyswietl_Badaniuk();
+document.write("dostęp do właściwości"+"<br>");
+document.write("samochod trzeci: "+'  Nazwa:'+samochod3.nazwa+'  Kolor:'+samochod3.kolor+'  Miejsca:'+samochod3.miejsca+'  Cena:'+samochod3.price);
+samochod3.samochod_pokaz_DodatkowaWartosc();
+samochod3.samochod_pokaz_Badaniuk();
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe!
+</body>
+</html>
+ </textarea>
+</form>
+</body>
+</html>
