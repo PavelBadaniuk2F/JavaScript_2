@@ -10,10 +10,10 @@ function samochod(nazwa,kolor,miejsca,wiek){
   this.miejsca=miejsca;
   this.wiek=wiek;
 }
-  samochod.prototype.samochod_wyswietl_Badaniuk = function () {
-  console.log(
-    `Nazwa: ${this.nazwa}, Kolor: ${this.kolor}, Miejsca: ${this.miejsca}, Wiek: ${this.wiek}`
-  );
+  samochod.prototype.samochod_wyswietl_Badaniuk = function () 
+  {
+  console.log('Nazwa:'+this.nazwa+' Kolor:'+this.kolor+' Miejsca:'+this.miejsca+' Wiek:'+this.wiek);
+  };
 samochod.rozmiar = "2,5 x 1";
  samochod.samochod_pokaz_DodatkowaWartosc=function() {console.log('Rozmiar: ' + this.rozmir + 'm')}
 samochod.samochod_pokaz_Badaniuk=function() {console.log(('Wiek: ' + this.wiek + 'lata')}
