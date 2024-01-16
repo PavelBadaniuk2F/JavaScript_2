@@ -4,21 +4,33 @@
 <style>
 </style>
 <script language="JavaScript">
-function samochod(nazwa,kolor,miejsca,cena){
+function samochod(nazwa,kolor,miejsca,wiek){
   this.nazwa=nazwa;
   this.kolor=kolor;
   this.miejsca=miejsca;
-  this.cena=cena;
+  this.wiek=wiek;
 }
-  samochod.prototype.pokazDane = function () {
+  samochod.prototype.samochod_wyswietl_Badaniuk = function () {
   console.log(
-    `Imię: ${this.imie}, Nazwisko: ${this.nazwisko}, Wiek: ${this.wiek}, Klasa: ${this.klasa}`
+    `Nazwa: ${this.nazwa}, Kolor: ${this.kolor}, Miejsca: ${this.miejsca}, Wiek: ${this.wiek}`
   );
+samochod.rozmiar = "2,5 x 1";
+ samochod.samochod_pokaz_DodatkowaWartosc=function() {console.log('Rozmiar: ' + this.rozmir + 'm')}
+samochod.samochod_pokaz_Badaniuk=function() {console.log(('Wiek: ' + this.wiek + 'lata')}
+    
+let samochod1 = new samochod("Toyota Camry", "Czerwony", 5, 8);
+let samochod2 = new samochod("Ford Mustang", "Czarny", 4, 1);
+let samochod3 = new samochod("Volkswagen Golf", "Biały", 5, 5);
+samochod1.samochod_wyswietl_Badaniuk();
+samochod1.samochod_pokaz_DodatkowaWartosc();
+samochod1.samochod_pokaz_Badaniuk();
+samochod2.samochod_wyswietl_Badaniuk();
+samochod2.samochod_pokaz_DodatkowaWartosc();
+samochod2.samochod_pokaz_Badaniuk();
+samochod3.samochod_wyswietl_Badaniuk();
+samochod3.samochod_pokaz_DodatkowaWartosc();
+samochod3.samochod_pokaz_Badaniuk();
 
-  samochod.samochod_wyswietl_Badaniuk();
-  samochod.wiek=2;
-  samochod.samochod_pokaz_Badaniuk=function() {alert('Wiek: ' + this.wiek + 'lata')}
-  samochod.samochod_pokaz_Badaniuk();
 </script>
 </head>
 <body>
