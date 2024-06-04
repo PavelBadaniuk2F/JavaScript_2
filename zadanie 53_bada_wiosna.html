@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rysowanie Prostokąta - Badaniuk</title>
+</head>
+<body>
+<div style="color:black;font-size:20px;">
+<script language="JavaScript">
+    var a_bad = parseInt(prompt("Podaj wysokość (a):", ""));
+    var b_bad = parseInt(prompt("Podaj szerokość (b):", ""));
+    for (var i = 0; i < b_bad; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+    var wiersz_bad = "*";
+    for (var i = 1; i <= (b_bad - 2); i++) {
+        wiersz_bad += "&nbsp&nbsp";
+    }
+    wiersz_bad += "*";
+    for (var i = 1; i <= (a_bad - 2); i++) {
+        document.write(wiersz_bad + "<br>");
+    }
+    for (var i = 0; i < b_bad; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+</script>
+</div>
+</body>
+</html>
