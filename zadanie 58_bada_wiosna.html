@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zad58</title>
+</head>
+<body>
+  <div class="output">
+    <script language="Javascript">
+      var x = prompt("Podaj liczbę 1=", "");
+      var Liczba1_bad = parseInt(x);
+      x = prompt("Podaj liczbę 2=", "");
+      var Liczba2_bad = parseInt(x);
+
+      if (Liczba1_bad < Liczba2_bad) {
+        for (i = Liczba1_bad; i <= Liczba2_bad; i++) {
+          if (i % 2 === 1) {
+            document.write("<p style='font-size: 18px; color: green;'>" + i + "</p>");
+          }
+        }
+      } else if (Liczba1_bad > Liczba2_bad) {
+        for (i = Liczba1_bad; i >= Liczba2_bad; i--) {
+          if (i % 2 === 1) {
+            document.write("<p style='font-size: 9px; color: blue;'>" + i + "</p>");
+          }
+        }
+      } else {
+        confirm("Liczby są równe, brak obliczeń");
+      }
+    </script>
+  </div>
+</body>
+</html>
